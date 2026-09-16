@@ -1,0 +1,132 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, sans-serif;
+  background: #0c1320;
+  color: #e6edf5;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 32px;
+  max-width: 1400px;
+  margin: auto;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #29364b;
+  padding-bottom: 20px;
+}
+h1 {
+  font-size: 28px;
+  margin: 6px 0;
+}
+p {
+  color: #a9b8cd;
+  line-height: 1.6;
+}
+.eyebrow {
+  color: #55dcc5;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.badge {
+  border: 1px solid #3b536e;
+  border-radius: 24px;
+  padding: 8px 16px;
+}
+main {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+.panel,
+figure {
+  background: #142034;
+  border: 1px solid #293a52;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 0;
+}
+button {
+  border: 0;
+  background: #55dcc5;
+  color: #07241e;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  margin: 7px 0;
+}
+button.secondary {
+  background: #2b3d57;
+  color: #e6edf5;
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: wait;
+}
+label {
+  display: block;
+  font-size: 13px;
+  color: #bcc9dc;
+  margin: 14px 0 5px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  background: #0c1626;
+  color: white;
+  border: 1px solid #40516a;
+  border-radius: 6px;
+}
+.maps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+figure img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: #0c1320;
+  margin-top: 16px;
+  border-radius: 8px;
+}
+figcaption {
+  font-weight: 600;
+}
+#status {
+  min-height: 65px;
+  white-space: pre-wrap;
+  font-size: 14px;
+}
+small {
+  color: #8ea4c0;
+  line-height: 1.6;
+}
+.legend {
+  margin-top: 16px;
+  color: #a9b8cd;
+  font-size: 13px;
+}
+h2 {
+  font-size: 16px;
+}
+@media (max-width: 900px) {
+  main,
+  .maps {
+    grid-template-columns: 1fr;
+  }
+  body {
+    padding: 16px;
+  }
+  header {
+    gap: 12px;
+  }
+}

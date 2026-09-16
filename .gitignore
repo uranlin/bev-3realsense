@@ -1,0 +1,66 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+ENV/
+.python-version
+.ipynb_checkpoints/
+
+# --- 環境變數 / 憑證 ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+token.json
+
+# --- 編輯器 / OS ---
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*
+
+# --- 壓縮檔 / 安裝檔 ---
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.exe
+*.msi
+
+# --- 日誌 / 暫存 ---
+*.log
+logs/
+tmp/
+temp/
+
+# --- 本專案 ---
+
+# --- Visual Studio ---
+.vs/
+*.ipch
+*.sqlite
+*.vsidx
+x64/
+Debug/
+Release/
+
+# 前端相依
+frontend/node_modules/
+node_modules/
+
+.pytest_cache/
+artifacts/
+
+# Local models and captures
+weights/
+recordings/

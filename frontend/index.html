@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>BEV Navigation · 三視角導航</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <div class="eyebrow">ROBOTICS / PERCEPTION & PLANNING</div>
+        <h1>三視角 BEV 導航</h1>
+        <p>合併觀測、辨識可通行區域，再規劃避障路徑。</p>
+      </div>
+      <span class="badge" id="mode">連線中</span>
+    </header>
+    <main>
+      <aside class="panel">
+        <h2>場景來源</h2>
+        <button id="capture">載入場景</button>
+        <p id="source">讀取服務狀態…</p>
+        <h2>路徑目標</h2>
+        <label for="x">橫向 X（公尺，右側為正）</label
+        ><input id="x" type="number" value="0" step="0.1" /><label for="z"
+          >前向 Z（公尺）</label
+        ><input id="z" type="number" value="4" step="0.1" /><label for="radius"
+          >機器人半徑（公尺）</label
+        ><input
+          id="radius"
+          type="number"
+          value="0.25"
+          min="0"
+          step="0.05"
+        /><button id="plan" class="secondary" disabled>規劃路徑</button>
+        <p id="status" role="status" aria-live="polite">尚未載入場景。</p>
+        <small
+          >未知區域不可通行。若起點、終點或通道沒有足夠觀測，系統會回報無路徑。</small
+        >
+      </aside>
+      <section>
+        <div class="maps">
+          <figure>
+            <figcaption>融合鳥瞰圖</figcaption>
+            <img id="color" alt="三視角融合鳥瞰圖" />
+          </figure>
+          <figure>
+            <figcaption>可通行區域與路徑</figcaption>
+            <img id="free" alt="障礙、未知區域及規劃路徑" />
+          </figure>
+        </div>
+        <p class="legend">
+          綠色：可通行　紅色：障礙　棕色：安全膨脹範圍　藍色：未知　青色：路徑
+        </p>
+        <p id="notice">本頁顯示感知與規劃結果，沒有下發馬達控制命令。</p>
+      </section>
+    </main>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
